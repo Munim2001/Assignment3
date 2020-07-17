@@ -61,9 +61,7 @@ function brickCalculator (storied) {
 
     else if (storied >10 && storied <= 20){
 
-        var feet2 = storied * 12;
-
-        var brick = feet2 * 1000;
+        var brick = (10 * 15 * 1000) + (storied - 10) * 12 * 1000;
 
         return brick;
 
@@ -71,9 +69,7 @@ function brickCalculator (storied) {
 
     else if (storied > 20) { 
 
-        var feet3 = storied * 10;
-
-        var brick = feet3 * 1000;
+        var brick = (10 * 15 * 1000) + (10 * 12 * 1000) + (storied - 20) * 10 * 1000;
 
         return brick;
 
@@ -84,7 +80,7 @@ function brickCalculator (storied) {
 
 // Output test exapmle
 
-var first = brickCalculator(5);
+var first = brickCalculator(25);
 
 console.log(first);
 
